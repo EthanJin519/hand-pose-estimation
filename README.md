@@ -1,9 +1,12 @@
 
-Multi-Branch Adversarial Regression for Domain Adaptative Hand Pose Estimation
+# Domain Adaptive hand pose Estimation Based on self-looping adversarial training strategy
 
-Installation：
-python_requires='>=3.6',
-install_requires=[
+
+# Installation
+
+python_requires='>=3.6'
+
+install_requires:
    'torch>=1.7.0',
    'torchvision>=0.5.0',
    'numpy',
@@ -11,10 +14,9 @@ install_requires=[
    'tqdm',
    'scikit-learn',
    'webcolors',
-   'matplotlib'
-],
+   'matplotlib'.
 
-Dataset：
+Datasets：
   Rendered Handpose Dataset(synthetic dataset)，
   Hand-3d-Studio Dataset(real-word dataset)，
   Stereo Hand Pose Tracking Benchmark(real-world dataset).
