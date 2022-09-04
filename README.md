@@ -17,20 +17,37 @@
  	  'webcolors',
  	  'matplotlib'.
      
-Datasets：
-  Rendered Handpose Dataset(synthetic dataset)，
-  Hand-3d-Studio Dataset(real-word dataset)，
-  Stereo Hand Pose Tracking Benchmark(real-world dataset).
+# Datasets
+
+ [Rendered Handpose Dataset](https://lmb.informatik.uni-freiburg.de/resources/datasets/RenderedHandposeDataset.en.html) (synthetic dataset)
+ 
+ [Hand-3d-Studio Dataset](https://www.yangangwang.com/papers/ZHAO-H3S-2020-02.html) (real-word dataset)
+ 
+ [Stereo Hand Pose Tracking Benchmark](https://www.dropbox.com/sh/ve1yoar9fwrusz0/AAAfu7Fo4NqUB7Dn9AiN8pCca?dl=0) (real-world dataset) 
 
 
 
-Running the code
-1. Evaluate on real-world dataset H3D or STB
-   python test.py data/H3D -t Hand3DStudio --checkpoint  models/H3D_test.pth,
-   python test.py data/STB -t STB --checkpoint  models/STB_test.pth
+ #  Trained models
+ 
+ The trained models can be found [here](https://drive.google.com/drive/folders/1S9NKA2Vvn7XP5D9GB9fwMV9BapV2n-YW?usp=sharing).
+
+ 
+ 
+ # Run the code
+ 
+ 1. Evaluate on real-world dataset (H3D or STB).
+    ```
+    python test.py data/H3D -t Hand3DStudio --checkpoint  models/H3D_test.pth,
+    python test.py data/STB -t STB --checkpoint  models/STB_test.pth
+    ```
    
-2. Training
-   python marsda.py data/H3D -t Hand3DStudio
-   python marsda.py data/STB -t STB
+   
+ 2. Training.
+    
+    Run the following script:
+    ```
+    python marsda.py data/H3D -t Hand3DStudio
+    python marsda.py data/STB -t STB
+    ```
    
   
