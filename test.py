@@ -573,7 +573,7 @@ if __name__ == '__main__':
 
     parser.add_argument("--ema_model", type=str, default=None,
                         help="Where restore pretrained model parameters from.")
-    parser.add_argument("--resume", type=str, default=None,
+    parser.add_argument("--checkpoint", type=str, default=None,
                         help="where restore model parameters from.")
     parser.add_argument("--resume2", type=str, default='models/pretrain.pth',
                         help="where restore model parameters from.")
