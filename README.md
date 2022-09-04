@@ -4,18 +4,19 @@
 
 # Installation
 
-python_requires='>=3.6'
+ python_requires='>=3.6'
 
-install_requires:
-   'torch>=1.7.0',
-   'torchvision>=0.5.0',
-   'numpy',
-   'prettytable',
-   'tqdm',
-   'scikit-learn',
-   'webcolors',
-   'matplotlib'.
+ Install_requires:
 
+  	 'torch>=1.7.0',
+  	 'torchvision>=0.5.0',
+  	 'numpy',
+  	 'prettytable',
+ 	  'tqdm',
+ 	  'scikit-learn',
+ 	  'webcolors',
+ 	  'matplotlib'.
+     
 Datasets：
   Rendered Handpose Dataset(synthetic dataset)，
   Hand-3d-Studio Dataset(real-word dataset)，
