@@ -15,16 +15,16 @@ from torchvision.transforms import Compose, ToPILImage
 import torch.nn.functional as F
 
 #sys.path.append('../../..')
-from UDA.model.regda_4 import PoseResNet as RegDAPoseResNet, \
+from uda.model.regda_4 import PoseResNet as RegDAPoseResNet, \
     PseudoLabelGenerator, RegressionDisparity4, PoseResNet3 as RegDAPoseResNet3, PoseResNet2 as RegDAPoseResNet2, RegressionDisparity3
 
-from UDA.model.regda_6 import PoseResNetx5 as RegDAPoseResNetx1, PoseResNetx6 as RegDAPoseResNetx2, RegressionDisparityx1, PseudoLabelGenerator01, refineNet3, RegressionDisparity
+from uda.model.regda_6 import PoseResNetx5 as RegDAPoseResNetx1, PoseResNetx6 as RegDAPoseResNetx2, RegressionDisparityx1, PseudoLabelGenerator01, refineNet3, RegressionDisparity
 
-import UDA.model as models
-from UDA.model.pose_resnet2 import Upsampling, PoseResNet
-from UDA.model.loss import JointsKLLoss, update_ema_variables5, loss3
-import UDA.dataset as datasets
-import UDA.dataset.keypoint_detection as T
+import uda.model as models
+from uda.model.pose_resnet2 import Upsampling, PoseResNet
+from uda.model.loss import JointsKLLoss, update_ema_variables5, loss3
+import uda.dataset as datasets
+import uda.dataset.keypoint_detection as T
 from utils import Denormalize
 from utils.data import ForeverDataIterator
 from utils.meter import AverageMeter, ProgressMeter, AverageMeterDict
