@@ -1,5 +1,5 @@
 
-# Domain Adaptive hand pose Estimation Based on self-looping adversarial training strategy
+# Domain Adaptative hand pose Estimation Based on self-looping adversarial training strategy
 
 
 # Installation
