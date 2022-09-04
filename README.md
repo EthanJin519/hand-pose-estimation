@@ -46,8 +46,8 @@
     
     Run the following script:
     ```
-    python marsda.py data/H3D -t Hand3DStudio
-    python marsda.py data/STB -t STB
+    python train.py data/H3D -t Hand3DStudio
+    python train.py data/STB -t STB
     ```
    
   
