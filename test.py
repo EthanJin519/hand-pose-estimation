@@ -153,7 +153,7 @@ def main(args: argparse.Namespace):
     lr_scheduler_refine = LambdaLR(optimizer_refine, lr_decay_function)
     start_epoch = 0
 
-    if args.resume is None:
+    if args.checkpoint is None:
         if args.pretrain is None:
             # first pretrain the backbone and upsampling
             print("Pretraining the model on source domain.")
@@ -191,7 +191,7 @@ def main(args: argparse.Namespace):
       #  refineNet.load_state_dict(checkpoint['refine'])
     else:
         # optionally resume from a checkpoint
-        checkpoint = torch.load(args.resume, map_location='cpu')
+        checkpoint = torch.load(args.checkpoint, map_location='cpu')
         model.load_state_dict(checkpoint['model'])
         model_ema.load_state_dict(checkpoint['model'])
         optimizer_f.load_state_dict(checkpoint['optimizer_f'])
@@ -546,9 +546,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Source Only for Keypoint Detection Domain Adaptation')
     # dataset parameters
     parser.add_argument('--source_root', default='data/RHD', help='root path of the source dataset')
-    parser.add_argument('--target_root', default='data/H3D', help='root path of the target dataset')
+    parser.add_argument('target_root', help='root path of the target dataset')
     parser.add_argument('-s', '--source', default='RenderedHandPose', help='source domain(s)')
-    parser.add_argument('-t', '--target', default='Hand3DStudio', help='target domain(s)')
+    parser.add_argument('-t', '--target', help='target domain(s)')
     parser.add_argument('--resize-scale', nargs='+', type=float, default=(0.6, 1.3),
                         help='scale range for the RandomResizeCrop augmentation')
     parser.add_argument('--rotation', type=int, default=180,
